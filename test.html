@@ -1,0 +1,180 @@
+<!DOCTYPE>
+<html lang="en">
+
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="CSS/test.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Baloo|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
+    </head>
+    
+    <body>
+        
+        <div id="wrapper">
+            
+            <div class="container-fluid">
+                
+                <div class="row main">
+                    
+                        <div class="offset-lg-5 col-lg-2
+                                    offset-md-4 col-md-4
+                                    offset-sm-3 col-sm-6
+                                    offset-xs-2 col-xs-8">
+                                    
+                            <div class="downArrowContainer">
+                                
+                                <img src="Images/downArrow.png" alt="#" class="downarrowBtn"/>
+                                <span class="downArrowText">Add Year</span>
+                                
+                                <input type="text" class="searchBarYear" id="srcBarYear" autocomplete="off">
+                                
+                            </div>
+                            
+                        </div>
+                    
+                    
+                    
+                    
+                    <div class="offset-lg-2 col-lg-8
+                                offset-md-2 col-md-8
+                                offset-sm-1 col-sm-10
+                                offset-xs-1 col-xs-10">
+                        
+                        
+                        <h3 class="mainTitle"></h3>
+                        
+                        
+                        <form class="searchForm" onsubmit="return false">
+                            
+                            <input type="text" class="searchBar" id="srcBar"  autocomplete="off">
+                            <input type="button" value="submit" class="searchBtn">
+                            
+                        </form>
+
+                    </div>
+                    
+                </div>
+                    
+                
+                <div class="row">
+                    
+                    <div class="offset-lg-4 col-lg-4
+                                offset-md-4 col-md-4
+                                offset-sm-1 col-sm-10
+                                offset-xs-1 col-xs-10 movieSummaryContainer">
+                        
+                        
+                        <h3 class="movieSummaryText" id="movieSummaryTxt">ENTER A MOVIE TITLE TO VIEW DETAILS</h3>
+                        
+                        <small class="movieDetails" id="title"></small>
+                        <small class="movieDetails" id="genre"></small>
+                        <small class="movieDetails" id="runtime"></small>
+                        <small class="movieDetails" id="year"></small>
+
+                        <small class="movieDetails" id="plot"></small>
+                        
+                        <div class="imageLinkContainer">
+                        
+                            
+                            <a href="" id="movieWebIconURL2"><img src="Images/webicon.png" alt="#" class="movieWebIcon" id="movieWebIcon2"/></a>
+                            
+                        
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                    <div class="row results">
+                      
+                            <div class="offset-lg-1 col-lg-3 
+                                        offset-md-1 col-md-4 
+                                        offset-sm-2 col-sm-8
+                                        offset-xs-1 col-xs-10
+                                        metaWebsiteContainer
+                                        criticWebsiteContainer">
+                                
+                                <h2 class="criticWebsiteTitle">METACRITIC</h2>
+                                <small class="criticText">Metacritic is a website that aggregates reviews of media products: music albums, games, movies, TV shows, DVDs, and formerly, books. The scores from each review are averaged.</small>
+                                
+                                
+                                <img src="Images/downArrow.png" class="criticDownArrow">
+                                <div class="sideBoxScore">Score</div>
+                                
+                                <small class="rating" id="metaRating"></small>
+                                <canvas id="metaCanvas" width="70" height="70"></canvas>
+                                
+                                
+                                <img src="Images/downArrow.png" class="criticDownArrow downArrowTwo">
+                                <div class="sideBoxWebsite">Website</div>
+                                
+                                <a href="" class="viewWebsiteAnchor" id="viewWebsiteAnchor1"><img src="Images/viewWebsiteIcon.png" alt="#" class="viewWebsiteIcon viewWebsiteIcon1"></a>
+                
+                            </div>
+                        
+                        
+                            <div class="offset-lg-1 col-lg-3
+                                        offset-md-2 col-md-4 offset-md-1
+                                        offset-sm-2 col-sm-8 
+                                        offset-xs-1 col-xs-10 
+                                        imdbWebsiteContainer
+                                        criticWebsiteContainer">
+                               
+                                <h2 class="criticWebsiteTitle">IMDB</h2>
+                                <small class="criticText">Launched in 1990, the Internet Movie Database (abbreviated IMDb) is an online database of information related to films, television programs and video games.</small>
+                                
+                                
+                                <img src="Images/downArrow.png" class="criticDownArrow">
+                                <div class="sideBoxScore" id="two">Score</div>
+                                
+                                <small class="rating" id="imdbRating"></small>
+                                <canvas id="imdbCanvas" width="70" height="70"></canvas>
+                                
+                                <img src="Images/downArrow.png" class="criticDownArrow  downArrowTwo">
+                                <div class="sideBoxWebsite">Website</div>
+                                
+                                <a href="" class="viewWebsiteAnchor" id="viewWebsiteAnchor2"><img src="Images/viewWebsiteIcon.png" alt="#" class="viewWebsiteIcon viewWebsiteIcon2"></a>
+                                
+                            </div>
+                        
+                            <div class="offset-lg-0 col-lg-3 offset-lg-0
+                                        offset-md-3 col-md-6 
+                                        offset-sm-2 col-sm-8 
+                                        offset-xs-1 col-xs-10
+                                        rottenWebsiteContainer
+                                        criticWebsiteContainer">
+                                
+                                <h2 class="criticWebsiteTitle">ROTTEN TOMATOES</h2>
+                                <small class="criticText">As the leading online aggregator of movie and TV show reviews from professional critics, Rotten Tomatoes offers the most comprehensive guide to what's fresh.</small>
+                                
+                                
+                                <img src="Images/downArrow.png" class="criticDownArrow">
+                                <div class="sideBoxScore">Score</div>
+                                
+                                <small class="rating" id="rottenRating">Unavailable<br> API is currently down for Rotten Tomatoes</small>
+                                <canvas id="rottenCanvas" width="70" height="70"></canvas>
+                                
+                                
+                                <img src="Images/downArrow.png" class="criticDownArrow  downArrowTwo">
+                                <div class="sideBoxWebsite">Website</div>
+                                
+                                <a href="" class="viewWebsiteAnchor" id="viewWebsiteAnchor3"><img src="Images/viewWebsiteIcon.png" alt="#" class="viewWebsiteIcon  viewWebsiteIcon3"></a>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+            
+            </div>
+
+        
+        <script type="text/javascript" src="Javascript/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="Javascript/test.js"></script>
+    </body>
+
+</html>
