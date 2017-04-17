@@ -1,0 +1,517 @@
+/*   UNIVERSAL SELECTOR   */
+* {
+    padding:0;
+    margin:0;
+}
+/*   All classes wrapped   */
+#wrapper {
+}
+/*   Allows opacity of background to not affect other elements   */
+#wrapper:after {
+    content : "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(../Backgrounds/digitalBG.png); 
+    background-size:cover;
+    width: 100%;
+    height: 100%;
+    opacity : 1;
+    z-index: -1;
+}
+
+/*   NAME - blinks inside the main circle  */
+.name {
+    position:absolute;
+    margin-top:200px;
+    width:100%;
+    font-family:dosis;
+    text-align:center;
+    font-size:5em;
+    color:white;
+    opacity:0.04;
+    font-weight:bold;
+}
+/* MAIN CONTAINER - contains main circle and text boxes */
+.mainContainer {
+    width:70%;
+    float:right;
+    margin-top:125px;
+    overflow:hidden;
+}
+/*   MAIN CIRCLE   */
+.circle {
+    border-radius:100%;
+    width:100%;
+    height:650px;
+    margin-left:50px;
+    background-color:rgba(0,0,0,0.5);
+    border:10px solid #40A6B5;
+}
+
+/*   BOX/CIRCLE GRADIENTS  */
+.enemyContainer, .mainBox, .smlCircle {
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(153,218,255,1)), color-stop(100%, rgba(0,128,128,1)));
+    background:-webkit-radial-gradient(center, ellipse cover, rgba(153,218,255,1) 0%, rgba(0,128,128,1) 100%);
+}
+
+
+/*   CENTRE CIRCLE TEXT - enabled by key presses (invisible until then)   */
+.badGuyInfo {
+    display:block;
+    width:50%;
+    margin:0 auto;
+    font-family:open sans;
+    color:white;
+    font-size:1.4em;
+    opacity:0.8;
+    text-align:center;
+    margin-top:20px;
+}
+.badGuyName {
+    margin-top:140px;
+    font-family:dosis;
+    font-size:2.6em;
+}
+.badGuyTraits {
+    color:firebrick;
+    font-weight:bold;
+}
+
+/*   SMALL CIRCLES - appear When you exit each side box   */
+.smlCircle {
+    position:absolute;
+    border-radius:100px;
+    background-color:antiquewhite;
+    border:5px solid white;
+    border-bottom:5px solid firebrick;
+    transition:all 1s;
+}
+/*   On hover each red border will rotate   */
+.smlCircle:hover {
+    transform:rotate(360deg);
+}
+
+/*   Specific CSS for each small circle   */
+.smlCircle1 {
+    width:75px;
+    height:75px;
+    top:100px;
+    transform:rotate(135deg);
+}
+.smlCircle2 {
+    width:100px;
+    height:100px;
+    top:265px;
+    left:-50;
+    transform:rotate(235deg);
+}
+.smlCircle3 {
+    width:125px;
+    height:125px;
+    bottom:75px;
+    transform:rotate(110deg)
+}
+.smlCircle4 {
+    width:125px;
+    height:125px;
+    right:-25px;
+    top:125px;
+    padding:20px;
+    transform:rotate(-45deg);
+}
+.smlCircle5 {
+    width:75px;
+    height:75px;
+    right:-10px;
+    bottom:150px;
+    transform:rotate(45deg);
+}
+
+/*   Text on each small circle   */
+.smlCircleText {
+    position:absolute;
+    z-index:1;
+    font-family:dosis;
+    width:25px;
+    text-align:center;
+    font-size:2em;
+    font-weight:bold;
+    opacity:0.3;
+    cursor:pointer;
+    transition:all 0.75s;
+}
+/*   Small circle hover effects   */
+.smlCircleText:hover {
+    opacity:0.8;
+}
+
+.smlCircleText1 {
+    top:112px;
+    left:40px;
+    transition:opacity 0.5s ease;
+}
+.smlCircleText2 {
+    top:290px;
+    left:-12px;
+}
+.smlCircleText3 {
+    bottom:115px;
+    left:65px;
+}
+.smlCircleText4 {
+    right:25px;
+    top:165px;
+}
+.smlCircleText5 {
+    right:15px;
+    top:418px;
+}
+
+/*   CORE FUNCTIONS / TRACK TARGETS BOX   */
+.mainBox {
+    height:auto;
+    border-radius:5px;
+    padding-bottom:15px;
+}
+
+/*   CORE FUNCTIONS BOX   */
+.mainBox1 {
+    margin:115px 50px 50px 50px;
+}
+/*   TRACK TARGETS BOX   */
+.mainBox2 {
+    margin:50px 50px 75px 50px;
+}
+
+/*   BOX IMAGES   */
+.mainBoxImg {
+    width:100px;
+    border-radius:5px;
+    margin:30px 10px 15px 15px;
+    opacity:0.6;
+}
+
+/*   BOX TEXT   */
+.mainBoxName, .mainBoxText {
+    width:60%;
+    display:inline-block;
+    text-align:center;
+    font-size:1em;
+}
+.mainBoxName {
+    position:relative;
+    font-family:dosis;
+    font-size:2em;
+    top:25px;
+    opacity:0.9;
+    padding:10px 0px 10px 0px;
+}
+.mainBoxText {
+    display:inline-block;
+    position:relative;
+    width:100%;
+    font-size:0.6em;
+    padding:15px 0px 10px 0px;
+    font-family:open sans;
+}
+
+/*   HIDDEN TEXT - accessible with the [E] key   */
+.coreFunctionsText {
+    margin:10px;
+    text-align:center;
+    font-family:open sans;
+    display:none;
+    opacity:0;
+}
+.coreTextCol1, .coreTextCol2, .coreTextCol3 {
+    font-weight:bold;
+    opacity:0.8;
+}
+.coreTextCol1 {
+    color:green;
+}
+.coreTextCol2 {
+    color:yellow;
+}
+.coreTextCol3 {
+    color:green;
+}
+
+/*   Close button for boxes on the left side of the page  */
+.xBtn {
+    float:right;
+    width:20px;
+    margin-top:15px; 
+    opacity:0.8;
+}
+/*   Close button hover effects   */
+.xBtn:hover {
+    opacity:1;
+    cursor:pointer;
+}
+
+
+
+/*   LEFT SIDE CONTAINER - holds target boxes   */
+.sideContainer {
+    width:30%;
+    float:left;
+    padding:25px;
+    margin-top:100px;
+    margin-bottom:50px;
+}
+
+/*   Left box classes(TARGET 1 - 3)   */
+.enemyContainer {
+    border-radius:5px;
+    margin:25px 0px 25px 0px;
+    height:auto;
+    opacity:1;
+}
+.enemyContainer1 {
+    margin-top:75px;
+}
+
+/*   Images of bad guys found in each box   */
+.badGuyImg {
+    width:100px;
+    border-radius:5px;
+    margin:15px 25px 15px 0px;
+}
+
+/*   Target box text   */
+.targetName, .targetText {
+    width:55%;
+    display:inline-block;
+    text-align:center;
+    font-size:1em;
+}
+.targetName {
+    position:relative;
+    font-family:dosis;
+    font-size:2em;
+    top:25px;
+    opacity:0.9;
+}
+.targetText {
+    display:inline-block;
+    position:relative;
+    width:100%;
+    font-size:0.6em;
+    padding:15px 0px 10px 0px;
+    font-family:open sans;
+}
+/*   Key is a different colour to the rest of the text   */
+.targetKey {
+    color:firebrick;
+    font-weight:bold;
+}
+
+
+/* POWER BAR */
+.powerBar {
+    text-align:center;
+    margin-top:50px;
+}
+/*   Specific bars   */
+.bar {
+    display:inline-block;
+    width:5%;
+    background-color:#4592A2;
+    height:8px;
+    border-radius:2.5px;
+}
+/*   Power bar text   */
+.powerBarText {
+    display:block;
+    width:100%;
+    margin:0 auto;
+    color:white;
+    padding:10px 0px 10px 0px;
+    font-family:dosis;
+    font-size:1.2em;
+}
+
+
+
+/*   MEDIA QUERIES   */
+/*   Smallest browser window - 580px width and below */
+@media only screen
+    and (min-width:0px)
+    and (max-width:580px) {
+        .mainContainer {
+            width:100%;
+        }
+        .circle {
+            width:100%;
+            margin-left:0;
+        }
+        .name {
+            font-size:2.4em;
+            margin-top:250px;
+        }
+        .smlCircle {
+            
+        }
+        .mainBox {
+            margin-top:50px;
+            margin-left:10%;
+        }
+        .mainBoxName {
+            width:100%;
+            font-size:1.6em;
+            margin-bottom:15px;
+        }
+        .mainBoxTitle {
+            
+        }
+        .sideContainer {
+            width:100%;
+            margin-top:0;
+            padding:0;
+        }
+        .enemyContainer {
+            width:80%;
+            left:10%;
+            margin-bottom:20px;
+        }
+        
+        .powerBar {
+            margin-top:0;
+            margin-bottom:50px;
+        }
+        
+        .targetName, .targetText {
+            width:70%;
+            margin-bottom:15px;
+        }
+        .mainBoxImg {
+            width:75px;
+            display:block;
+            margin:0 auto;
+            margin-top:15px;
+        }
+        .badguyInfo {
+            font-size:16px;
+        }
+        .badguyName {
+            margin-top:175px;
+        }
+}
+
+
+/*   MEDIA QUERIES   */
+/*   For when browser window is resized below 951px   */
+@media only screen
+    and (min-width:581px)
+    and (max-width:950px) {
+        .mainContainer {
+            width:100%;
+        }
+        .circle {
+            width:120%;
+            margin-left:25%;
+        }
+        .name {
+            font-size:2.4em;
+            margin-top:250px;
+        }
+        .smlCircle {
+            
+        }
+        .mainBox {
+            margin-top:50px;
+            margin-left:32%
+        }
+        .mainBoxName {
+            width:100%;
+            font-size:1.6em;
+            margin-bottom:15px;
+        }
+        .mainBoxTitle {
+            
+        }
+        .sideContainer {
+            width:100%;
+            margin-top:-50px;
+            padding:0;
+        }
+        .enemyContainer {
+            width:80%;
+            left:10%;
+            margin-bottom:20px;
+        }
+        
+        .powerBar {
+            margin-top:0;
+            margin-bottom:50px;
+        }
+        
+        .targetName, .targetText {
+            width:70%;
+            margin-bottom:15px;
+        }
+        .mainBoxImg {
+            width:75px;
+            display:block;
+            margin:0 auto;
+            margin-top:15px;
+        }
+        .badguyInfo {
+            font-size:18px;
+        }
+}
+
+
+/*   Low Res LAPTOPS   */
+@media only screen
+    
+    and (min-width:951px)
+    and (max-width:1480px) {
+        .mainContainer {
+            width:100%;
+        }
+        .sideContainer {
+            width:50%;
+        }
+        .powerBar {
+            margin-top:0;
+            margin-bottom:50px;
+        }
+        .enemyContainer1 {
+            margin-top:0px;
+        }
+        .mainBoxName {
+            width:40%;
+            display:inline-block;
+            text-align:center;
+            font-size:1.4em;
+        }
+}
+
+/*   Low res MONITOR   */
+@media only screen
+    and (min-width:1481px)
+    and (max-width:1800px) {
+        .mainContainer {
+            
+        }
+        .sideContainer {
+           
+        }
+        .powerBar {
+            margin-top:0;
+            margin-bottom:50px
+        }
+        .enemyContainer1 {
+            
+        }
+        .mainBoxName {
+            width:50%;
+            display:inline-block;
+            text-align:center;
+            font-size:1.6em;
+        }
+}
