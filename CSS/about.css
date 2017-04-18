@@ -1,0 +1,414 @@
+* {
+    padding:0;
+    margin:0;
+}
+
+#wrapper {
+    background-color:#E2E6E6;
+}
+
+.phoneMenu {
+    position:fixed;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background-color:black;
+    z-index:11111;
+    opacity:0.9;
+    transition:1s ease-in-out;
+    top:-1000px;
+}
+
+.phoneMenuItems {
+    width:60%;
+    margin:0 auto;
+    text-align:center;
+    margin-top:75px;
+}
+
+.phoneMenuItems li {
+    line-height:3;
+    list-style-type:none;
+}
+
+.phoneMenuItems li a {
+    text-decoration:none;
+    font-family:alfa slab one;
+    font-size:1.5em;
+    opacity:;
+    color:coral;
+}
+
+.menuBtnPhone:hover {
+    opacity:0.8;
+    cursor:pointer;
+}
+
+.x {
+    margin-top:50px;
+    font-family:alfa slab one;
+    font-size:3em;
+    color:coral;
+}
+.x:hover {
+    cursor:pointer;
+}
+
+/* Main header */
+.mainBlock {
+    height:auto;
+    padding-bottom:125px;
+    background-color:#1D1128;
+    opacity:0.95;
+    overflow:hidden;
+    background-image:url('../Backgrounds/portfolioBG.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.mainTitle {
+    width:60%;
+    margin:0 auto;
+    text-align:center;
+    font-family:alfa slab one;
+    margin-top:175px;
+    font-size:2.4em;
+    color:white;
+}
+.mainTitleName {
+    display:inline-block;
+}
+
+.mainTitleName::first-letter {
+    border-bottom:3px solid coral;
+}
+
+.mainText {
+    width:80%;
+    display:block;
+    margin: 0 auto;
+    text-align:center;
+    margin-top:15px;
+    font-family:open sans;
+    font-size:1.2em;
+    color:white;
+    opacity:0.8;
+}
+
+.btnContainer {
+    width:35%;
+    height:auto;
+    margin: 0 auto;
+    margin-top:450px;
+    text-align:center;
+}
+
+.portfolioBtn {
+    display:block;
+    margin:0 auto;
+    margin-top:150px;
+    border:none;
+    background-color:coral;
+    transition:0.25s ease-in-out;
+    border-radius:5px;
+    font-family:alfa slab one;
+    font-size:1.4em;
+    color:white;
+    padding:12px;
+    width:150px;
+}
+
+.menuBtnContainer {
+    position:fixed;
+    width:150px;
+    height:200px;
+    padding-top:25px;
+    padding-left:10px;
+    overflow:hidden;
+}
+
+.aboutBtn, .interestsBtn{
+    display:block;
+    margin-top:15px;
+    margin-left:-125px;
+    font-family:open sans;
+    color:white;
+    width:100px;
+    font-size:1.2em;
+    transition:0.5s ease-in-out;
+    z-index:1;
+}
+
+.aboutBtn::first-letter, .interestsBtn::first-letter {
+    color:coral;
+}
+
+.aboutBtn:hover, .interestsBtn:hover {
+    text-decoration:none;
+    color:coral;
+}
+
+.menuBtn {
+    width:50px;
+    transition:0.25s ease-in-out;
+    z-index:1111;
+}
+
+.menuBtnPhone {
+    width:50px;
+    position:fixed;
+    transition:0.25s ease-in-out;
+    z-index:1111;
+    top:0;
+    left:0;
+    margin:20px;
+    opacity:0.5;
+    display:none;
+}
+
+
+.portfolioBtn:hover, .menuBtn:hover {
+    opacity:0.8;
+    cursor:pointer;
+}
+
+/* Line break */
+.lineBreak {
+    margin:0 auto;
+    width:8%;
+    border-top:1px solid grey;
+    margin-top:75px;
+    margin-bottom:50px;
+}
+
+/* Line break text - experienced in .. */
+.lineBreakText {
+    text-align:center;
+    font-family:sacramento;
+    font-size:3.4em;
+    opacity:0.8;
+}
+
+/* Language containers (what I'm experienced at) */
+.htmlBlock, .cssBlock, .javascriptBlock, .jqueryBlock, .bootstrapBlock {
+    height:auto;
+    margin-top:50px;
+    background-color:#51A9;
+    padding:25px;
+    opacity:0;
+}
+
+.afterScroll {
+    transition:0.25s ease-in-out;
+    opacity:1;
+    width:100%;
+}
+
+/* Puts space between footer and last container */
+.jqueryBlock {
+    margin-bottom:150px;
+}
+
+
+.blockTitle {
+    font-family:alfa slab one;
+    font-size:2.8em;
+    color:#1D1128;
+    width:50%;
+    opacity:0.9;
+    margin:0 auto;
+}
+.blockTitle::first-letter {
+    border-bottom:3px solid coral;
+}
+
+.blockPara {
+    margin-top:25px;
+    font-family:open sans;
+    font-size:1.4em;
+    line-height:1.6;
+    width:50%;
+    margin:0 auto;
+    margin-top:25px;
+}
+.animeImg, .artImg, .moviesImg, .webImg {
+    width:100px;
+    opacity:0.6;
+    padding:15px;
+}
+.artImg {
+    width:80px;
+}
+.moviesImg {
+    opacity:0.5;
+}
+.webImg {
+    width:85px;
+}
+
+#footer {
+    height:100px;
+    background-color:#1D1128;
+}
+
+
+
+
+/* Under 500px screen size */
+@media only screen 
+    and (max-width:500px) {
+        
+        .lineBreak, .menuBtn, .menuBtnContainer {
+            display:none;
+        }
+        .menuBtnPhone {
+            display:block;
+        }
+        .blockTitle {
+            font-size:2em;
+            width:90%;
+        }
+        .blockPara {
+            width:90%;
+            font-size:1em;
+            margin:0 auto;
+            margin-top:0;
+            margin-bottom:-25px;
+        }
+        .lineBreakText {
+            font-size:3em;
+            width:75%;
+            margin:0 auto;
+            margin-top:50px;
+            margin-bottom:-25px;
+        }
+        .portfolioBtn {
+            margin-top:50px
+        }
+        .mainTitle {
+            margin-top:100px
+        }
+        .mainBlock {
+            height:475px
+        }
+        .homeBtn {
+            margin-top:50px;
+            width:100px;
+            font-size:1em;
+        }
+}
+
+/* Changes width of text onscreen so it's not squashed */
+@media only screen
+    and (min-width:501px)
+    and (max-width:1400px) {
+        
+        .blockTitle {
+            width:80%;
+        }
+        .blockPara {
+            width:80%;
+        }
+}
+
+@media only screen
+    and (min-width:1401px)
+    and (max-width:1600px) {
+        .blockTitle {
+            width:75%;
+        }
+        .blockPara {
+            width:75%;
+        }
+}
+
+/* Phones */
+@media only screen 
+    and (max-device-width:500px)
+    and (orientation: portrait) {
+        
+        .mainTitle {
+            margin-top:100px
+        }
+        .mainBlock {
+            height:475px
+        }
+        .menuBtn {
+            display:none;
+        }
+        .menuBtnPhone {
+            display:block;
+            width:50px;
+        }
+        .x {
+            margin-top:10px;
+        }
+        .portfolioBtn {
+            margin-top:50px;
+            width:100px;
+            font-size:1em;
+        }
+        .blockTitle, .blockPara {
+            width:90%;   
+        }
+        .blockPara {
+            margin-bottom:-50px;
+        }
+        .lineBreakText {
+            font-size:3em;
+            width:75%;
+            margin:0 auto;
+            margin-top:50px;
+            margin-bottom:-25px;
+        }
+        .phoneMenuItems {
+            margin-top:75px;
+        }
+        .homeBtn {
+            margin-top:50px;
+            width:100px;
+            font-size:1em;
+        }
+}
+
+@media only screen 
+    and (max-device-width:800px)
+    and (orientation: landscape) {
+        
+        .lineBreak, .menuBtn, .menuBtnContainer {
+            display:none;
+        }
+        .menuBtnPhone {
+            display:block;
+        }
+        .phoneMenuItems {
+            margin-top:50px;
+        }
+        .x {
+            margin-top:10px;
+        }
+        .blockTitle {
+            font-size:2em;
+            text-align:center;
+            width:90%;
+        }
+        .blockPara {
+            width:60%;
+            font-size:1em;
+        }
+        .lineBreakText {
+            font-size:2.6em;
+            width:75%;
+            margin:0 auto;
+            margin-top:50px;
+        }
+        .portfolioBtn {
+            margin-top:50px
+        }
+        .mainTitle {
+            margin-top:100px
+        }
+        .mainBlock {
+            height:475px
+        }
+}
