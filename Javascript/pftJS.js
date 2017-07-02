@@ -113,7 +113,7 @@ function getWeather() {
                             getWeather();
                         }
                         
-                            //On enter key up the new location request gets sent to the API (if it fails location defaults to London)
+                            //On enter key up the new location request gets sent to the API
                             event.preventDefault();
                             locationObj.textField.addEventListener('keyup', function() {
                                 if (event.keyCode == 13) 
