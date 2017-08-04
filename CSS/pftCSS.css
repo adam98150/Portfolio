@@ -72,10 +72,10 @@
 
 @media only screen and (max-width:767px) {
     .container-fluid {
-        margin-top:50px;
+        margin-top:30px;
     }
     #weatherImg {
-        width:120px;
+        width:75px;
     }
     
     .windImg {
