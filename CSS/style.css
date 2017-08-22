@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+
+.transition {
+  transition: 0.25s ease-in-out;
+}
+
+.longTransition {
+  transition: 1s ease-in-out;
+}
+
+.hide {
+  margin-top: -250px;
+  background: linear-gradient(black, transparent);
+}
+
+.signBtn {
+  opacity: 0.6;
+  background-color: white;
+  border: none;
+}
+
+.padding {
+  padding: 25px;
+}
+
+.btnPadding {
+  padding: 10px 15px 10px 15px;
+}
+
+/* REGULAR CLASSES */
+
+.container-fluid {
+  min-height: 100%;
+  height: auto;
+  width: 100%;
+  background-image: url("../Images/bg1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+  overflow: scroll;
+}
+
+.menuArrow {
+  cursor: pointer;
+  margin-top:35px;
+  width: 25px;
+  transform: rotate(0deg);
+  -webkit-animation: blink 4s infinite;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+.curveArrowCont {
+  width: 50%;
+  margin: 0 auto;
+  margin-top:25px;
+  text-align: left;
+  opacity: 0.75;
+}
+
+.testt {
+  height: 50px;
+}
+
+span {
+  position: absolute;
+  bottom: 25px;
+  left: -50px;
+  color: white;
+  font-size: 2em;
+  opacity: 0.8;
+  font-family: indie flower;
+}
+
+.text {
+  position: absolute;
+  top: 350px;
+  font-size: 4em;
+  color: white;
+  font-family: indie flower;
+  padding: 25px;
+  opacity: 0.75;
+}
+
+.skyLogo {
+  width: 100px;
+}
+
+.center {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.joinBtn {
+  position: absolute;
+  width: 150px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  bottom: 225px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: open sans;
+  font-size: 1.4em;
+  background-color: white;
+  border: none;
+  opacity: 0.75;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.joinBtn:hover {
+  opacity: 1;
+}
+
+ p {
+  width: 200px;
+  position: absolute;
+  bottom: 145px;
+  font-family: indie flower;
+  font-size: 1.2em;
+  color: white;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.curveArrow {
+  height: 200px;
+  transform: rotate(165deg);
+}
+
+.test {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: indie flower;
+  font-size: 2em;
+  opacity: 0.75;
+  display: none;
+
+}
+
+@media only screen and
+  (min-width: 0px) and
+  (max-width: 1200px) {
+    #curveArrowRow {
+      display: none;
+    }
+    .test {
+      display: block;
+    }
+    p {
+      position: relative;
+      bottom: 0;
+      top: 150px;
+    }
+    .joinBtn {
+      position: relative;
+      bottom: 0;
+      top: 150px;
+    }
+  }
