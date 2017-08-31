@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+<head>
+  <meta charset="utf-8" />
+  <title>Sky Express</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <!-- BEGIN GLOBAL MANDATORY STYLES -->
+  <link rel="stylesheet" href="assets/layout/css/mainStyle.min.css">
+  <link href="assets/layout/openSans/openSans.css" rel="stylesheet" type="text/css" />
+  <link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+  <!-- END GLOBAL MANDATORY STYLES -->
+  <!-- BEGIN THEME GLOBAL STYLES -->
+  <link href="assets/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
+  <link href="assets/global/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
+  <!-- END THEME GLOBAL STYLES -->
+  <!-- BEGIN THEME LAYOUT STYLES -->
+  <link href="assets/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/layout/css/themes/light.min.css" rel="stylesheet" type="text/css" id="style_color" />
+  <link href="assets/layout/css/custom.min.css" rel="stylesheet" type="text/css" />
+  <!-- END THEME LAYOUT STYLES -->
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <style>
+    .page-sidebar.navbar-collapse.collapse {
+      visibility: hidden;
+    }
+
+    .page-content {
+      margin-left: 0px !important;
+      padding-left: 0px !important;
+    }
+
+    .menu-toggler.sidebar-toggler {
+      visibility: hidden;
+    }
+
+    .note.note-info {
+      background-color: #fff;
+      box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .2);
+      -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .2);
+    }
+
+    a.menu-toggler.responsive-toggler {
+      visibility: hidden;
+    }
+
+    .page-top {
+      margin-right: -20px;
+    }
+
+    @media (max-width: 991px) {
+
+      .page-top {
+        margin-right: -45px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .page-header.navbar .search-form {
+        margin-right: 10px;
+        float: right;
+        margin-top: -52px;
+      }
+      .page-top {
+        margin-right: 0;
+      }
+    }
+  </style>
+
+</head>
+
+<!-- END HEAD -->
+
+<body class="page-container-bg-solid page-header-fixed page-md">
+  <input type="hidden" id="baseurl" name="baseurl" value="" />
+  <!-- BEGIN HEADER -->
+  <div class="page-header navbar navbar-fixed-top">
+    <!-- BEGIN HEADER INNER -->
+    <div class="page-header-inner ">
+      <!-- BEGIN LOGO -->
+      <div class="page-logo">
+        <a href="index.html">
+          <img src="assets/layout/img/logo-light.png" alt="logo" class="logo-default" /> </a>
+        <div class="menu-toggler sidebar-toggler">
+        </div>
+      </div>
+      <!-- END LOGO -->
+      <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+      <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+      <!-- END RESPONSIVE MENU TOGGLER -->
+      <!-- BEGIN PAGE TOP -->
+      <div class="page-top">
+        <!-- BEGIN HEADER SEARCH BOX -->
+        <form class="search-form" action="page_general_search_2.html" method="GET">
+          <div class="input-group">
+            <input type="text" class="form-control input-sm" placeholder="Search..." name="query">
+            <span class="input-group-btn">
+              <a href="javascript:;" class="btn submit">
+                <i class="icon-magnifier"></i>
+              </a>
+            </span>
+          </div>
+        </form>
+        <!-- END HEADER SEARCH BOX -->
+        <!-- BEGIN TOP NAVIGATION MENU -->
+        <div class="top-menu">
+          <ul class="nav navbar-nav pull-right">
+            <!-- BEGIN USER LOGIN DROPDOWN -->
+            <li class="dropdown dropdown-user ">
+              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                <span class="username username-hide-on-mobile"> Nick </span>
+                <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+                <img alt="" class="img-circle" src="assets/layout/img/avatar.png" /> </a>
+              <ul class="dropdown-menu dropdown-menu-default">
+                <li>
+                  <a href="page_user_profile_1.html">
+                    <i class="icon-user"></i> My Profile </a>
+                </li>
+                <li class="divider"> </li>
+                <li>
+                  <a href="page_user_login_1.html">
+                    <i class="icon-key"></i> Log Out </a>
+                </li>
+              </ul>
+            </li>
+            <!-- END USER LOGIN DROPDOWN -->
+          </ul>
+        </div>
+        <!-- END TOP NAVIGATION MENU -->
+      </div>
+      <!-- END PAGE TOP -->
+    </div>
+    <!-- END HEADER INNER -->
+  </div>
+  <!-- END HEADER -->
+  <!-- BEGIN HEADER & CONTENT DIVIDER -->
+  <div class="clearfix"> </div>
+  <!-- END HEADER & CONTENT DIVIDER -->
+  <!-- BEGIN CONTAINER -->
+  <div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar-wrapper">
+      <!-- BEGIN SIDEBAR -->
+      <div class="page-sidebar navbar-collapse collapse">
+        <!-- BEGIN SIDEBAR MENU -->
+        <ul class="page-sidebar-menu page-sidebar-menu-closed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+          <li class="nav-item start active open">
+            <a href="index.html" class="nav-link nav-toggle">
+              <i class="icon-home"></i>
+              <span class="title">Dashboard</span>
+              <span class="selected"></span>
+            </a>
+          </li>
+          <li class="heading">
+            <h3 class="uppercase">Admin Pages</h3>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:;" class="nav-link nav-toggle">
+              <i class="icon-film"></i>
+              <span class="title">Video Content</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:;" class="nav-link nav-toggle">
+              <i class="icon-book-open"></i>
+              <span class="title">Catalogue</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:;" class="nav-link nav-toggle">
+              <i class="icon-user"></i>
+              <span class="title">Admin Users</span>
+            </a>
+          </li>
+        </ul>
+        <!-- END SIDEBAR MENU -->
+      </div>
+      <!-- END SIDEBAR -->
+    </div>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+      <!-- BEGIN CONTENT BODY -->
+      <div class="page-content">
+        <div class="row">
+          <div class="col-lg-12 featuredCont">
+            FEATURED
+          </div>
+        </div>
+        <!-- BEGIN PAGE BASE CONTENT -->
+        <div class="note note-info television">
+          <div class="genre">Television</div>
+          <div class="television-underline"></div>
+
+          <div class='row'>
+            <div class='col-md-offset-1 col-md-10'>
+              <div class="carousel slide media-carousel" id="media">
+                <div class="carousel-inner">
+                  <!-- ITEM ONE -->
+                  <div class="item active">
+
+
+                    <div class="row box1">
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">1 Start<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">2<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">3<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <!-- MOVE DOWN ONE -->
+                      <div class='moveDown_one' id='moveDiv_1'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">4<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">5<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">6<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ITEM TWO -->
+                  <div class="item">
+                    <div class="row box2">
+                      <!-- MOVE DOWN TWO -->
+                      <div class="moveDown_two" id='moveDiv_2'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">7<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">8<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">9<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                      <!-- MOVE DOWN THREE -->
+                      <div class="moveDown_three"  id='moveDiv_3'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">10<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">11<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">12<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- ITEM THREE -->
+                    <div class="item">
+                      <div class="row box3">
+                        <!-- MOVE DOWN FOUR -->
+                        <div class="moveDown_four" id='moveDiv_4'>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">13<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">14<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">15<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                        </div>
+                      <!-- MOVE DOWN FIVE -->
+                      <div class="moveDown_five" id='moveDiv_5'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">16<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">17<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">18<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+                <a data-slide="next" href="#media" class="right carousel-control">›</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="note note-info cinema">
+          <div class="genre">Cinema</div>
+          <div class="cinema-underline"></div>
+          <div class='row'>
+            <div class='col-md-offset-1 col-md-10'>
+              <div class="carousel slide media-carousel" id="media2">
+                <div class="carousel-inner">
+                  <!-- ITEM ONE -->
+                  <div class="item active">
+                    <div class="row box1_1">
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">1 start<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">2<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">3<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <!-- MOVE DOWN ONE -->
+                      <div class="moveDown_one_1" id='moveDiv_6'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">4<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">5<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">6<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ITEM TWO -->
+                  <div class="item">
+                    <div class="row box2_1">
+                      <!-- MOVE DOWN TWO -->
+                      <div class="moveDown_two_1"  id='moveDiv_7'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">7<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">8<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">9<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                      <!-- MOVE DOWN THREE -->
+                      <div class="moveDown_three_1"  id='moveDiv_8'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">10<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">11<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">12<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- ITEM THREE -->
+                    <div class="item">
+                      <div class="row box3_1">
+                        <!-- MOVE DOWN FOUR -->
+                        <div class="moveDown_four_1"  id='moveDiv_9'>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">13<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">14<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">15<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                        </div>
+                      <!-- MOVE DOWN FIVE -->
+                      <div class="moveDown_five_1"  id='moveDiv_10'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">16<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">17<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">18<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a data-slide="prev" href="#media2" class="left carousel-control">‹</a>
+                <a data-slide="next" href="#media2" class="right carousel-control">›</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="note note-info documentaries">
+          <div class="genre">Documentaries</div>
+          <div class="documentaries-underline"></div>
+          <div class='row'>
+            <div class='col-md-offset-1 col-md-10'>
+              <div class="carousel slide media-carousel" id="media3">
+                <div class="carousel-inner">
+                  <!-- ITEM ONE -->
+                  <div class="item active">
+                    <div class="row box1_2">
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">1 start<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">2<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">3<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <!-- MOVE DOWN ONE -->
+                      <div class="moveDown_one_2"  id='moveDiv_11'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">4<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">5<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">6<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ITEM TWO -->
+                  <div class="item">
+                    <div class="row box2_2">
+                      <!-- MOVE DOWN TWO -->
+                      <div class="moveDown_two_2" id='moveDiv_12'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">7<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">8<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">9<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                      <!-- MOVE DOWN THREE -->
+                      <div class="moveDown_three_2" id='moveDiv_13'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">10<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">11<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">12<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- ITEM THREE -->
+                    <div class="item">
+                      <div class="row box3_2">
+                        <!-- MOVE DOWN FOUR -->
+                        <div class="moveDown_four_2" id='moveDiv_14'>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">13<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">14<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">15<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                        </div>
+                      <!-- MOVE DOWN FIVE -->
+                      <div class="moveDown_five_2" id='moveDiv_15'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">16<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">17<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">18<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a data-slide="prev" href="#media3" class="left carousel-control">‹</a>
+                <a data-slide="next" href="#media3" class="right carousel-control">›</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="note note-info sports">
+          <div class="genre">Sports</div>
+
+          <div class="sports-underline"></div>
+          <div class='row'>
+            <div class='col-md-offset-1 col-md-10'>
+              <div class="carousel slide media-carousel" id="media4">
+                <div class="carousel-inner">
+                  <!-- ITEM ONE -->
+                  <div class="item active">
+                    <div class="row box1_3">
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">1 start<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">2<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">3<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <!-- MOVE DOWN ONE -->
+                      <div class="moveDown_one_3" id='moveDiv_16'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">4<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">5<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">6<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ITEM TWO -->
+                  <div class="item">
+                    <div class="row box2_3">
+                      <!-- MOVE DOWN TWO -->
+                      <div class="moveDown_two_3" id='moveDiv_17'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">7<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">8<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">9<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                      <!-- MOVE DOWN THREE -->
+                      <div class="moveDown_three_3" id='moveDiv_18'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">10<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">11<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">12<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- ITEM THREE -->
+                    <div class="item">
+                      <div class="row box3_3">
+                        <!-- MOVE DOWN FOUR -->
+                        <div class="moveDown_four_3" id='moveDiv_19'>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">13<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">14<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">15<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                        </div>
+                      <!-- MOVE DOWN FIVE -->
+                      <div class="moveDown_five_3" id='moveDiv_20'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">16<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">17<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">18<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a data-slide="prev" href="#media4" class="left carousel-control">‹</a>
+                <a data-slide="next" href="#media4" class="right carousel-control">›</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="note note-info news">
+          <div class="genre">News</div>
+
+          <div class="news-underline"></div>
+          <div class='row'>
+            <div class='col-md-offset-1 col-md-10'>
+              <div class="carousel slide media-carousel" id="media5">
+                <div class="carousel-inner">
+                  <!-- ITEM ONE -->
+                  <div class="item active">
+                    <div class="row box1_4">
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">1 start<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">2<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <div class="col-md-2 col-sm-4 col-xs-4">
+                        <a class="thumbnail" href="#">3<img alt="" src="http://placehold.it/150x150"></a>
+                      </div>
+                      <!-- MOVE DOWN ONE -->
+                      <div class="moveDown_one_4" id='moveDiv_21'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">4<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">5<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">6<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ITEM TWO -->
+                  <div class="item">
+                    <div class="row box2_4">
+                      <!-- MOVE DOWN TWO -->
+                      <div class="moveDown_two_4" id='moveDiv_22'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">7<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">8<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">9<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                      <!-- MOVE DOWN THREE -->
+                      <div class="moveDown_three_4" id='moveDiv_23'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">10<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">11<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">12<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- ITEM THREE -->
+                    <div class="item">
+                      <div class="row box3_4">
+                        <!-- MOVE DOWN FOUR -->
+                        <div class="moveDown_four_4" id='moveDiv_24'>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">13<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">14<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                          <div class="col-md-2 col-sm-4 col-xs-4">
+                            <a class="thumbnail" href="#">15<img alt="" src="http://placehold.it/150x150"></a>
+                          </div>
+                        </div>
+                      <!-- MOVE DOWN FIVE -->
+                      <div class="moveDown_five_4" id='moveDiv_25'>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">16<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">17<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-4">
+                          <a class="thumbnail" href="#">18<img alt="" src="http://placehold.it/150x150"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <a data-slide="prev" href="#media5" class="left carousel-control">‹</a>
+                <a data-slide="next" href="#media5" class="right carousel-control">›</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END PAGE BASE CONTENT -->
+      </div>
+      <!-- END CONTENT BODY -->
+    </div>
+    <!-- END CONTENT -->
+  </div>
+  <!-- END CONTAINER -->
+  <!--[if lt IE 9]>
+<script src="assets/global/plugins/respond.min.js"></script>
+<script src="assets/global/plugins/excanvas.min.js"></script>
+<script src="assets/global/plugins/ie8.fix.min.js"></script>
+<![endif]-->
+  <!-- BEGIN CORE PLUGINS -->
+  <script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+  <script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+  <script src="assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+  <script src="assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+  <script src="assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+  <!-- END CORE PLUGINS -->
+  <!-- BEGIN THEME GLOBAL SCRIPTS -->
+  <script src="assets/global/scripts/app.min.js" type="text/javascript"></script>
+  <!-- END THEME GLOBAL SCRIPTS -->
+  <!-- BEGIN THEME LAYOUT SCRIPTS -->
+  <script src="assets/layout/scripts/layout.min.js" type="text/javascript"></script>
+  <script src="assets/layout/scripts/javaScript.js" type="text/javascript"></script>
+  <script src="assets/layout/scripts/fade-in.js" type="text/javascript"></script>
+  <!-- <script src="assets/layout/scripts/demo.min.js" type="text/javascript"></script> -->
+  <!-- END THEME LAYOUT SCRIPTS -->
+</body>
+
+</html>
